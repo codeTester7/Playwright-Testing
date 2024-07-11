@@ -52,7 +52,7 @@ test('product name on the page', async ({page}) => {
 });
 
 // TEST for builtIn function .getByAltText()
-test.only('GET_BY_ALT_TEXT', async ({page}) => {
+test('GET_BY_ALT_TEXT', async ({page}) => {
     await page.goto(baseURL);
 
     // getByAltText will give the element with the mentioned alt text
@@ -73,13 +73,13 @@ test.skip('GET_BY_PLACEHOLDER', async ({page}) => {
 });
 
 // TEST for builtIn function .getByRole()
-test.only('GET_BY_ROLE', async ({page}) => {
+test('GET_BY_ROLE', async ({page}) => {
     await page.goto(baseURL);
     await page.getByRole('input', {type: 'submit'});
 });
 
 // TEST for builtIn function .getByText()
-test.only('GET_BY_TEXT', async ({page}) => {
+test('GET_BY_TEXT', async ({page}) => {
     await page.goto(baseURL);
     await page.click('id=login2');
     //username locator -- html element
@@ -93,7 +93,7 @@ test.only('GET_BY_TEXT', async ({page}) => {
 });
 
 // TEST for buildIn function .getByLabel()
-test.only('GET_BY_LABEL', async ({page}) => {
+test('GET_BY_LABEL', async ({page}) => {
     await page.goto(baseURL);
     await page.click('id=login2');
     const Label1 = await page.getByLabel("Username:");
