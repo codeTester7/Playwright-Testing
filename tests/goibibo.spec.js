@@ -1,9 +1,8 @@
 import { test, expect } from '@playwright/test';
-
-test('test', async ({ page }) => {
-  await page.goto('https://www.goibibo.com/');
-  await page.locator('.logSprite').click();
-  await page.getByRole('link', { name: 'Flights', exact: true }).click();
+test('test', async ({page}) => {
+  await page.goto('https://www.goibibo.com/flights/');
+  // await page.locator('.logSprite').click();
+  // await page.getByRole('link', { name: 'Flights', exact: true }).click();
   
   // Selecting From city
   await page.getByText('FromEnter city or airport').click();
