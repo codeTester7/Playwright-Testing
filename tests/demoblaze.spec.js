@@ -103,4 +103,5 @@ test('GET_BY_LABEL', async ({page}) => {
     // const passwordLabel = await Label2.textContent();
     await page.locator('id=loginpassword').fill('test@123');
     await page.click("button[onclick='logIn()']");
-})
+});
+
