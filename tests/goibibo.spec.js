@@ -1,9 +1,10 @@
 import { test, expect } from '@playwright/test';
 test('test', async ({page}) => {
   await page.goto('https://www.goibibo.com/flights/');
+  await expect(page).toHaveURL('https://www.goibibo.com/flights/');
   // await page.locator('.logSprite').click();
   // await page.getByRole('link', { name: 'Flights', exact: true }).click();
-  
+  await expect(page).toHaveTitle('Flight Tickets, Flights Booking at Lowest Airfare, Book Air Tickets-Goibibo');
   // Selecting From city
   await page.getByText('FromEnter city or airport').click();
   await page.getByRole('textbox').fill('ben');
