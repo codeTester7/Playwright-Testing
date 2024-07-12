@@ -14,7 +14,7 @@ test('test', async ({page}) => {
   await page.getByText('New Delhi, India').click();
 
   // Selecting date of journey
-  await page.getByText('11 Jul\'').click();
+  await page.getByText('12 Jul\'').click();
   await page.getByLabel('Sat Jul 20').click();
 
   // Selecting passanger type
