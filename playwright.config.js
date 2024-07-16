@@ -27,7 +27,7 @@ module.exports = defineConfig({
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
     screenshot: 'only-on-failure',
-    browserName : "firefox",
+    browserName : "chromium",
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     headless : true,
@@ -35,11 +35,11 @@ module.exports = defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    // {
-    //   name: 'chromium',
-    //   use: { ...devices['Desktop Chrome'] },
-    // }
-
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    }
+,
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },

@@ -15,7 +15,7 @@ test('test', async ({page}) => {
   await page.getByText('New Delhi, India').click();
 
   // Selecting date of journey
-  await page.getByText('15 Jul\'').click();
+  await page.getByText('16 Jul\'').click();
   await page.getByLabel('Sat Jul 20').click();
 
   // Selecting passanger type
@@ -33,5 +33,7 @@ test('test', async ({page}) => {
   await page.getByText('SEARCH FLIGHTS').click();
 
   // Redirecting to the flight selection page
+  await page.waitForURL('https://www.goibibo.com/flights/air-BLR-DEL-20240720--2-1-1-E-D?');
   await page.goto('https://www.goibibo.com/flights/air-BLR-DEL-20240720--2-1-1-E-D?');
+  await page.locator('button', {value : 'VIEW FARES'}).first().click();
 });
