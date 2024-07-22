@@ -15,5 +15,6 @@ test('Item Purchase on Amazon', async ({page}) => {
     await page.waitForTimeout(3000);
     await page.getByRole('link', {name: 'Apple iPhone 15 (128 GB) - Black'}).nth(1).click();
     // await page.waitForTimeout(5000);
-    // await page.getByRole('input', {value : 'Add to Cart'}).click();
+    // await page.getByRole('input', {tit : 'Add to Cart'}).click();
+    await page.locator("#a-accordion-auto-16 #add-to-cart-button").click();
 })
